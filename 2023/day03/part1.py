@@ -1,4 +1,3 @@
-
 import re
 
 not_important_chars = "0123456789."
@@ -16,12 +15,12 @@ for data_idx, line in enumerate(data):
         post_idx = num.end() + 1
 
         if data_idx > 0:
-            pre = data[data_idx-1][pre_idx:post_idx]
+            pre = data[data_idx - 1][pre_idx:post_idx]
 
         cur = data[data_idx][pre_idx:post_idx]
 
-        if data_idx < len(data) -1:
-            post = data[data_idx+1][pre_idx:post_idx]
+        if data_idx < len(data) - 1:
+            post = data[data_idx + 1][pre_idx:post_idx]
 
         part_check = "".join([pre, cur, post])
         if any(elem not in not_important_chars for elem in part_check):

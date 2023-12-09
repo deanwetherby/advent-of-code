@@ -26,6 +26,6 @@ for key in start_keys:
 
 lcm = 1
 for solution in solutions:
-    lcm = lcm*solution//gcd(lcm, solution)
+    lcm = lcm * solution // gcd(lcm, solution)
 
 print(lcm)

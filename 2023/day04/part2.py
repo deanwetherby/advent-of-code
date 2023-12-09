@@ -12,6 +12,6 @@ for i, card in enumerate(data):
     other_numbers = numbers[WINNING_NUMBER_INDEX:]
     num_winners = sum(num in other_numbers for num in winning_numbers)
     for winner in range(num_winners):
-        card_instances[i+winner+1] += card_instances[i]
+        card_instances[i + winner + 1] += card_instances[i]
 
 print(sum(card_instances))

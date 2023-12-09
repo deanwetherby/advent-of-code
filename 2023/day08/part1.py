@@ -18,7 +18,7 @@ ct = 0
 key = START
 for step in cycle(steps):
     key = d[key][0] if step == "L" else d[key][1]
-    ct +=1
+    ct += 1
     if key == END:
         break
 

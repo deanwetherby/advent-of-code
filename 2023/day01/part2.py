@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Digit(Enum):
     zero = "z0o"
     one = "o1e"
@@ -21,7 +22,7 @@ for line in lines:
     # in line, replace string numbers with the number and then continue
     for digit in Digit:
         line = line.replace(digit.name, digit.value)
-    
+
     num = [c for c in line if c.isdigit()]
     two_digit = int(num[0] + num[-1])
     sum += two_digit
