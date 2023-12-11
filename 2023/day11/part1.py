@@ -23,13 +23,11 @@ for col, line in enumerate(rotated_data):
 
 total_distances = 0
 for ga, gb in itertools.combinations(universe, 2):
-    d = abs(ga[0] - gb[0]) + abs(ga[1] - gb[1])
-    for c in expansion["cols"]:
-        if min([ga[0], gb[0]]) < c < max([ga[0], gb[0]]):
-            d += 1
-    for r in expansion["rows"]:
-        if min([ga[1], gb[1]]) < r < max([ga[1], gb[1]]):
-            d += 1
+    min_x, max_x = min(ga[0], gb[0]), max(ga[0], gb[0])
+    min_y, max_y = min(ga[1], gb[1]), max(ga[1], gb[1])
+    d = max_x - min_x + max_y - min_y
+    d += sum([1 for c in expansion["cols"] if min_x < c < max_x])
+    d += sum([1 for r in expansion["rows"] if min_y < r < max_y])
     total_distances += d
 
 print(total_distances)
