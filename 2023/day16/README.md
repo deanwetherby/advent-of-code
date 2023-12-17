@@ -29,7 +29,7 @@ print(len(set([x for x, _ in energized]))-1)
 
 ## part 2
 
-I leveraged part 1 and turned the beam traversing logic into a fucntion. I called the function with the initial beam position in part 1 and got the same answer so I was on the right track.
+I leveraged part 1 and turned the beam traversing logic into a function. I called the function with the initial beam position in part 1 and got the same answer so I was on the right track.
 
 ```python
 def energize(initial: tuple[complex, complex]) -> int:
