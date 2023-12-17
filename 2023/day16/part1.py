@@ -23,10 +23,14 @@ while beams:
         cell = board.get(pos)
         if cell == "|":
             vel = 1j
+            # beams.append((pos, vel))
             beams.append((pos, -vel))
+            # break
         elif cell == "-":
             vel = -1
+            # beams.append((pos, vel))
             beams.append((pos, -vel))
+            # break
         elif cell == "/":
             vel = -complex(vel.imag, vel.real)
         elif cell == "\\":
